@@ -1,0 +1,101 @@
+// Place all the styles related to the messages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.main__box {
+  height: 87vh;
+  width: 100%;
+  padding: 25px 60px;
+  position: relative;
+  &__content {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    position: relative;
+    .skyarea-image {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+    }
+    .skyarea-name {
+      position: absolute;
+      top: 5px;
+      right: 0;
+      left: 0;
+      font-size: 20px;
+      height: 8%;
+      text-align: center;
+      text-shadow:1px 0 0 white, 1px 1px 0 white, 0 1px 0 white, -1px 1px 0 white, -1px 0 0 white, -1px -1px 0 white, 0 -1px 0 white, 1px -1px 0 white;
+    }
+    .message__content {
+      width: 100%;
+      height: calc(92% - 5px);
+      position: absolute;
+      bottom: 0;
+      overflow: scroll;
+      padding: 0 50px;
+      // display: flex;
+      flex-direction: column;
+      .message__box--setting {
+        .message__box {
+          background-color: black;
+          border-radius: 5px;
+          color: white;
+          padding: 5px 20px;
+          margin-bottom: 20px;
+          display: inline-block;
+          &--upper {
+            &__date {
+              font-size: 10px;
+            }
+          }
+          &--lower {
+            display: flex;
+            &__name {
+              font-size: 15px;
+              margin-right: 10px;
+            }
+            &__box {
+              display: flex;
+              flex-direction: column;
+              &__image {
+                padding: 5px 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .form-box {
+    position: absolute;
+    bottom: 20px;
+    right: 90px;
+    width: 300px;
+    .new_message {
+      position: relative;
+      display: flex;
+      color: white;
+      .form__message {
+        background-color: black;
+        color: white;
+      }
+      .form__mask {
+        position: absolute;
+        top: 17px;
+        right: 80px;
+        &__image {
+          .hidden {
+            display: none;
+          }
+        }
+      }
+      .message-submit {
+        width: 80px;
+        margin-left: 10px;
+        background-color: black;
+        color: white;
+      }
+    }
+  }
+}

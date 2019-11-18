@@ -1,0 +1,29 @@
+.main__box
+  .main__box__content
+    = image_tag @group.image, class: "skyarea-image"
+    .skyarea-name
+      = @group.name
+    .message__content
+      - @messages.each do |message|
+        .message__box--setting
+          .message__box
+            .message__box--upper
+              .message__box--upper__date
+                = message.created_at.strftime("%Y年%m月%d日 (#{%w(日 月 火 水 木 金 土)[Time.now.wday]}) %H時%M分")
+            .message__box--lower
+              .message__box--lower__name
+                = message.user.name
+              .message__box--lower__box
+                - if message.text.present?
+                  %p.message__box--lower__box__text
+                    = message.text 
+                = image_tag message.image.url, class: 'message__box--lower__box__image' if message.image.present?
+
+  .form-box
+    = form_for [@group, @message] do |f|
+      = f.text_field :text, class: 'form__message', placeholder: 'type a message'
+      .form__mask
+        = f.label :image, class: 'form__mask__image' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'message-submit'

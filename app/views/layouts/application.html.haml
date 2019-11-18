@@ -1,0 +1,33 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title SampleApp
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    %script src: "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+
+  %body
+    -# .first_snow
+    -#   ❄️
+    -# .second_snow
+    -#   ❄️
+    .header 
+      = link_to root_path, class: "header__name", data: {"turbolinks" => false} do 
+        ski area information
+      .header__user
+        - if user_signed_in?
+          %span.header__user__name
+            = current_user.name
+          = link_to "Log out", destroy_user_session_path, method: :delete, class: "header__user--edit"
+        -else
+          = link_to "Log in", new_user_session_path, class: "header__user--edit"
+          = link_to "Sign up", new_user_registration_path, class: "header__user--edit"
+
+      -# %label
+      -#   %i.fa.fa-snowflake
+      -#   %input{type: "checkbox", class: "snow-edit"}
+
+    = yield
