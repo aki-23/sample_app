@@ -1,0 +1,20 @@
+.group--edit
+  .group--edit__box
+    %h2 group edit
+    = form_for @group, class: 'edit_group' do |f|
+      .field
+        = f.label :image
+        %br/
+        = f.file_field :image, class: 'hidden'
+      .field
+        = f.label :name
+        %br/
+        = f.text_field :name
+      .field
+        = f.label :tag
+        %br/
+        -# = f.collection_check_boxes :tag_ids, Tag.all, :id, :prefecture
+        = f.collection_select :tag_ids, Tag.all, :id, :prefecture
+        -# = f.select :tag_ids, Tag.all
+      .actions
+        = f.submit "edit", class: "group-submit"

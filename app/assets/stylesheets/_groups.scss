@@ -3,8 +3,8 @@ body {
   width: 100vw;
   position: relative;
   box-sizing: border-box;
-  background-image: url(https://www.mywaytours.co.jp/images/plan/10-s.jpg);
-  background-size: cover;
+  background-image: url("images/mainbgi2.jpg");
+  background-size: 100% 100%;
 }
 
 div {
@@ -49,6 +49,19 @@ div {
   }
 }
 
+.admin__box {
+  position: absolute;
+  top: -60px;
+  left: 30px;
+}
+.group--create {
+  position: absolute;
+  top: 80px;
+  left: 70px;
+  width: 150px;
+  text-align: center;
+}
+
 .main {
   height: 87vh;
   width: 100%;
@@ -62,6 +75,50 @@ div {
     padding: 5px 10px;
     flex-wrap: wrap;
     align-items: space-around;
+  }
+}
+.phrase__box {
+  display: block;
+  font-size: 50px;
+  color: rgb(226, 147, 213);
+  font-weight: bold;
+  text-shadow:1px 0 0 black, 1px 1px 0 black, 0 1px 0 black, -1px 1px 0 black, -1px 0 0 black, -1px -1px 0 black, 0 -1px 0 black, 1px -1px 0 black;
+  font-family: cursive;
+  margin: 150px 0 0 250px;  
+  text-decoration: none;
+  &__winter,&__snow,&__ski,&__kuju {
+    margin-bottom: 10px;
+    animation-name:fade-in4;
+    animation-duration:1.5s; //アニメーション時間
+    animation-timing-function: ease-out; //アニメーションさせるイージング
+    animation-iteration-count:1; //繰り返し回数
+    animation-direction:normal; //往復処理をするかどうか
+    animation-fill-mode: forwards; //アニメーション後のスタイルをどうするか
+    opacity: 0;
+  }
+  &__winter {
+    animation-delay:0s; //アニメーション開始させる時間
+  }
+  &__snow {
+    animation-delay:1.5s; //アニメーション開始させる時間
+    // margin-left: 50px;
+  }
+  &__ski {
+    animation-delay:3s; //アニメーション開始させる時間
+    // margin-left: 100px;
+  }
+  &__kuju {
+    animation-delay:4.5s;
+    font-family: serif;
+    margin-left: 70px;
+    s {
+      color: gray
+    }
+  }
+  @keyframes fade-in4 {
+    opacity: 1;
+    0% {opacity: 0; transform: translate3d(30px,0,0);}
+    100% {opacity: 1; transform: translate3d(0,0,0);}
   }
 }
 .skyarea {
@@ -84,6 +141,11 @@ div {
     bottom: 10px;
     right: 10px;
   }
+  .group--edit--command {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
 }
 
 .search-form {
@@ -100,13 +162,39 @@ div {
     width: 75%;
     margin: 0;
     color: navy;
+    outline: none;
   }
   .search-submit {
     width: 20%;
     margin: 0;
     padding: 0;
+    outline: none;
     &:hover {
-      background-color: lighten(teal, 15%);
+      background-color: lighten(skyblue, 15%);
     }
   }
+}
+
+.group--new,.group--edit {
+  padding: 15px;
+  background-color: rgba(white,0.9);
+  width: 80%;
+  margin: 100px auto;
+  h2 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .form__mask__image {
+    display: block;
+    margin: 10px 10px;
+  }
+}
+.group-submit {
+  margin-top: 13px;
+  &:hover {
+    background-color: lighten(skyblue, 15%);
+  }
+}
+#group_tag_ids {
+  height: 30px;
 }

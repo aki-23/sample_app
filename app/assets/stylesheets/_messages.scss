@@ -37,7 +37,7 @@
       flex-direction: column;
       .message__box--setting {
         .message__box {
-          background-color: black;
+          background-color: darkblue;
           border-radius: 5px;
           color: white;
           padding: 5px 20px;
@@ -77,7 +77,14 @@
       display: flex;
       color: white;
       .form__message {
-        background-color: black;
+        background-color: darkblue;
+        color: white;
+        outline: none;
+      }
+      .form__message:focus {
+        background-color: darkblue;
+      }
+      .form__message::placeholder {
         color: white;
       }
       .form__mask {
@@ -93,8 +100,12 @@
       .message-submit {
         width: 80px;
         margin-left: 10px;
-        background-color: black;
+        background-color: darkblue;
         color: white;
+        outline: none;
+        &:hover {
+          background-color: lighten(blue,1%);
+        }
       }
     }
   }
