@@ -28,4 +28,4 @@ ski area information
 
 ### チャットページ
 6.チャット閲覧、投稿により情報収集を行う。
-![messagepage](https://user-images.githubusercontent.com/56856857/71350211-27c84a00-25b4-11ea-9eab-542c502b79ff.png)
+![messagepage](https://user-images.githubusercontent.com/56856857/71350532-d4a2c700-25b4-11ea-9b61-69bbde2134db.png)
