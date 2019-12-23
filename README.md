@@ -2,61 +2,19 @@
 
 # sample_app DB設計
 
-## usersテーブル
-|Column|Type|Options|
-|------|----|-------|
-|name|string|null: false|
-|email|string|null: false|
-|password|string|null: false|
-### Association
-- has_many :groups, through: :users_groups
-- has_many :users_groups
-- has_many :messages
+## アプリ概要
+スキー場についての情報掲示板
 
-## groupsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|name|string|null: false|
-### Association
-- has_many :users, through: :users_groups
-- has_many :users_groups
-- has_many :tags, through: :groups_tags
-- has_many :groups_tags
-- has_many :messages
+## 画面一覧
 
-## messagesテーブル
-|Column|Type|Options|
-|------|----|-------|
-|image|string||
-|text|string||
-|user_id|integer|null:false, foreign_key: true|
-|group_id|integer|null:false, foreign_key: true|
-### Association
-- belongs_to :users
-- belongs_to :group
+### ホームページ
+![homepage](https://user-images.githubusercontent.com/56856857/71333627-08aec580-257e-11ea-9648-aae968bff4c3.png)
 
-## tagsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|text|string|null: false|
-### Association
-- has_many :groups, through: :groups_tags
-- has_many :groups_tags
+### トップページ
+![toppage](https://user-images.githubusercontent.com/56856857/71332245-d2227c00-2578-11ea-8f70-2fc8eb4837fa.png)
 
-## users_groupsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|user_id|integer|null:false, foreign_key: true|
-|group_id|integer|null:false, foreign_key: true|
-### Association
-- belongs_to :user
-- belongs_to :group
+### スキー場一覧ページ
+![skyarealistpage](https://user-images.githubusercontent.com/56856857/71332677-6c36f400-257a-11ea-80b5-be4a6846624d.png)
 
-## groups_tagsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|group_id|integer|null:false, foreign_key: true|
-|tags_id|integer|null:false, foreign_key: true|
-### Association
-- belongs_to :group
-- belongs_to :tag
+### メッセージ投稿ページ
+[message-send.mp4.zip](https://github.com/aki-23/sample_app/files/3993509/message-send.mp4.zip)
