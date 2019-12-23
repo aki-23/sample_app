@@ -3,13 +3,15 @@ $("turbolinks:load", function(){
     let search_list = $(".main__groups");
 
     function appendGroup(group) {
-      let html = 
+      let html =
       `<div class="skyarea">
-        <a href="/groups/${group.id}/messages">
-          <img class="group-image" src="${group.image}">
+        <a class="skyarea_img" href="/groups/${group.id}/messages">
+          <img class="group-image" src="${group.image_url}">
         </a>
         <div class="skyarea__name">
-          ${group.name}
+          <a href="/groups/${group.id}/messages">
+            ${group.name}
+          </a>
         </div>
       </div>`
       search_list.append(html);

@@ -1,11 +1,16 @@
 .group--edit
   .group--edit__box
     %h2 group edit
-    = form_for @group, class: 'edit_group' do |f|
-      .field
+    = form_for @group, class: 'edit_group',html: { multipart: true} do |f|
+      .field.imgfield
         = f.label :image
         %br/
-        = f.file_field :image, class: 'hidden'
+        = f.label :image, class: "img-editform" do
+          %i.far.fa-folder-open.fa-2x
+        = image_tag @group.image_url, width: "188", height: "100"
+
+        %br/
+        = f.file_field :image
       .field
         = f.label :name
         %br/
@@ -13,8 +18,6 @@
       .field
         = f.label :tag
         %br/
-        -# = f.collection_check_boxes :tag_ids, Tag.all, :id, :prefecture
         = f.collection_select :tag_ids, Tag.all, :id, :prefecture
-        -# = f.select :tag_ids, Tag.all
       .actions
-        = f.submit "edit", class: "group-submit"
+        = f.submit "update", class: "group-submit"

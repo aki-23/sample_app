@@ -1,0 +1,20 @@
+.main
+  .main__groups
+    - @groups.each do |group|
+      .skyarea
+        = link_to group_messages_path(group),class: "skyarea_img" do
+          = image_tag group.image_url, class: "group-image"
+        .skyarea__name
+          = link_to group_messages_path(group) do
+            = group.name
+        - if user_signed_in? && current_user.id == 1
+          = link_to "group edit", edit_group_path(group), method: :get, class: "group--edit--command"
+
+  
+  = form_with url: search_groups_path, method: :get,class: "search-form", local: true do |form|
+    = form.text_field :keyword, placeholder: "スキー場を検索", class: "search-input"
+    = form.submit "search", class: "search-submit"
+  
+  - if user_signed_in? && current_user.id == 1
+    .admin__box
+      = link_to "group create", new_group_path, method: :get, class: "group--create"

@@ -84,67 +84,97 @@ div {
   font-weight: bold;
   text-shadow:1px 0 0 black, 1px 1px 0 black, 0 1px 0 black, -1px 1px 0 black, -1px 0 0 black, -1px -1px 0 black, 0 -1px 0 black, 1px -1px 0 black;
   font-family: cursive;
-  margin: 150px 0 0 250px;  
+  margin: 200px 0 0 250px;  
   text-decoration: none;
-  &__winter,&__snow,&__ski,&__kuju {
+  &__winter,&__snow,&__ski {
     margin-bottom: 10px;
     animation-name:fade-in4;
-    animation-duration:1.5s; //アニメーション時間
+    animation-duration:3s; //アニメーション時間
     animation-timing-function: ease-out; //アニメーションさせるイージング
     animation-iteration-count:1; //繰り返し回数
     animation-direction:normal; //往復処理をするかどうか
     animation-fill-mode: forwards; //アニメーション後のスタイルをどうするか
     opacity: 0;
   }
-  &__winter {
-    animation-delay:0s; //アニメーション開始させる時間
-  }
-  &__snow {
-    animation-delay:1.5s; //アニメーション開始させる時間
-    // margin-left: 50px;
-  }
-  &__ski {
-    animation-delay:3s; //アニメーション開始させる時間
-    // margin-left: 100px;
-  }
-  &__kuju {
-    animation-delay:4.5s;
-    font-family: serif;
-    margin-left: 70px;
-    s {
-      color: gray
-    }
-  }
   @keyframes fade-in4 {
-    opacity: 1;
     0% {opacity: 0; transform: translate3d(30px,0,0);}
     100% {opacity: 1; transform: translate3d(0,0,0);}
   }
 }
 .skyarea {
   position: relative;
-  width: 29%;
-  height: 45%;
+  // width: 29%;
+  // height: 45%;
+  width: 17%;
+  height: 38%;
   margin: 13px;
   display: inline-block;
   .group-image {
+    display: inline-block;
+    position: relative;
     height: 100%;
     width: 100%;
     // border: solid 2px aqua;
-    filter: drop-shadow(0 0 10px white);
+    // filter: drop-shadow(0 0 10px white);
     background-size: cover;
+    border-radius: 50%;
+  }
+  a.skyarea_img:after {
+    position: absolute;
+    display: block;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    // background: #fff;
+    border-radius: 50%;
+    box-shadow: 
+      inset 0 0 50px #fff,
+      inset 0 0 50px #fff,
+      inset 0 0 50px #fff,
+      inset 0 0 50px #fff;
   }
   &__name {
-    background-color: rgba(white,0.7);
-    color: blue;
     position: absolute;
-    bottom: 10px;
+    bottom: 4px;
     right: 10px;
+    background-color: rgba(#fff,0.9);
+    border-radius: 50%;
+    a {
+      text-decoration: none;
+      color: blue;
+      font-weight: bold;
+      font-size: 15px;
+    }
+    i {
+      margin-right: 5px;
+      a {
+        text-decoration: none;
+        font-weight: bold;
+        color: deeppink;
+      }
+    }
   }
   .group--edit--command {
     position: absolute;
     top: 10px;
     right: 10px;
+  }
+}
+.main-rank {
+  padding: 80px 60px 0px 60px;
+  .skyarea-rank {
+    position: relative;
+    width: 17%;
+    height: 38%;
+    // width: 225px;
+    // height: 225px;
+    margin: 10px 10px 50px 10px;
+    display: inline-block;
+    .skyarea__name {
+      font-size: 14px;
+    }
   }
 }
 
@@ -175,26 +205,47 @@ div {
   }
 }
 
-.group--new,.group--edit {
-  padding: 15px;
-  background-color: rgba(white,0.9);
-  width: 80%;
-  margin: 100px auto;
+
+a.top-btn {
+  background-color: blue;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  line-height: 80px;
+  width: 100px;
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+}
+
+.destination__box {
+  position: absolute;
+  top: 80px;
+  left: 25%;
+  height: 400px;
+  width: 350px;
+  background-color: rgba(#fff,0.9);
+  border-radius: 20px;
+  padding: 20px 10px 10px 10px;
   h2 {
-    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 22px;
     text-align: center;
   }
-  .form__mask__image {
-    display: block;
-    margin: 10px 10px;
+  a {
+    position: relative;
+    display: inline-block;
+    width: calc(100% - 20px);
+    text-decoration: none;
+    margin: 20px 0 0 20px;
+    color: blue;
+    font-weight: bold;
+    font-size: 16px;
+    span {
+      position: absolute;
+      top: 5px;
+      left: 50px;
+    }
   }
-}
-.group-submit {
-  margin-top: 13px;
-  &:hover {
-    background-color: lighten(skyblue, 15%);
-  }
-}
-#group_tag_ids {
-  height: 30px;
 }

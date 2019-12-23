@@ -1,11 +1,14 @@
 .group--new
   .group--new__box
     %h2 group create
-    = form_for @group, class: 'new_group' do |f|
-      .field
+    = form_for @group, class: 'new_group',html: { multipart: true} do |f|
+      .field.imgfield
         = f.label :image
         %br/
-        = f.file_field :image, class: 'hidden'
+        = f.label :image, class: "img-newform" do
+          %i.far.fa-folder-open.fa-2x
+        %br/
+        = f.file_field :image
       .field
         = f.label :name
         %br/

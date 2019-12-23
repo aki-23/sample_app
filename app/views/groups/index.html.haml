@@ -1,32 +1,19 @@
-- if user_signed_in?
-  .main
-    .main__groups
-      - @groups.each do |group|
-        .skyarea
-          = link_to group_messages_path(group) do
-            = image_tag group.image, class: "group-image"
-          .skyarea__name
-            = group.name
-          - if user_signed_in? && current_user.id == 1
-            = link_to "group edit", edit_group_path(group), method: :get, class: "group--edit--command"
+.main
+  .destination__box
+    %h2
+      information list
+    = link_to root_path, data: {"turbolinks" => false} do
+      %i.fas.fa-snowman.fa-2x
+      %span ホーム画面
 
-    
-    = form_with url: search_groups_path, method: :get,class: "search-form", local: true do |form|
-      = form.text_field :keyword, placeholder: "スキー場を検索", class: "search-input"
-      = form.submit "search", class: "search-submit"
-    
-    - if user_signed_in? && current_user.id == 1
-      .admin__box
-        = link_to "group create", new_group_path, method: :get, class: "group--create"
-- else
-  .phrase__box
-    .phrase__box__winter
-      WE LOVE WINTER
-    .phrase__box__snow
-      WE LOVE SNOW
-    .phrase__box__ski
-      WE LOVE SKI
-    .phrase__box__kuju
-      さぁ
-      %s> 九重森林公園
-      スキー場へ
+    = link_to grouplist_groups_path, data: {"turbolinks" => false} do
+      %i.fas.fa-snowman.fa-2x
+      %span スキー場一覧
+
+    = link_to grouprank_groups_path, data: {"turbolinks" => false} do
+      %i.fas.fa-snowman.fa-2x
+      %span スキー場ランキング（TOP10）
+
+    = link_to groups_path, data: {"turbolinks" => false} do
+      %i.fas.fa-snowman.fa-2x
+      %span コミュニティ（追加予定）

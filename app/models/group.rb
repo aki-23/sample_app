@@ -4,9 +4,10 @@ class Group < ApplicationRecord
   # has_many :users, through: :users_groups
   has_many :users
   # belongs_to :user
-  has_many :group_tag
+  has_many :group_tag, dependent: :destroy
   has_many :tags, through: :group_tag
   has_many :messages
+  mount_uploader :image, ImageUploader
 
   def self.search(search)
     if search

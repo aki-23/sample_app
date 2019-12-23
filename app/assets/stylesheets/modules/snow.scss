@@ -30,37 +30,3 @@
     top: 150%;
   }
 }
-
-.second_snow {
-  /*雪の色*/
-  color: snow;
-  /*雪の大きさ*/
-  font-size: 18px;
-  /*初期位置*/
-  position: fixed;
-  top:-5%;
-  left: 5%;
-  z-index: 1;
-  /*雪そのものを幅に適当な幅で降らせる*/
-  text-shadow:
-  10vw  -200px 2px,
-  7vw   -300px 3px,
-  15vw  -400px 2px,
-  25vw  -480px 3px,
-  35vw  -150px 4px,
-  40vw  -440px 3px,
-  48vw  -250px 2px,
-  58vw  -280px 2px,
-  72vw  -320px 3px,
-  82vw  -120px 2px,
-  90vw  -470px 2px;
-  /*アニメーションさせる*/
-  animation: anim 6s linear infinite;
-}
-
-@keyframes anim {
-  100% {
-    color: transparent;
-    top: 150%;
-  }
-}
