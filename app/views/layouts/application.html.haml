@@ -12,6 +12,7 @@
   %body
     -# .first_snow
     -#   ❄️
+    %canvas#canvas
     .header 
       = link_to groups_path, class: "header__name", data: {"turbolinks" => false} do 
         ski area information
@@ -20,10 +21,10 @@
           %span.header__user__name
             = link_to user_path(current_user) do
               = current_user.name
-          = link_to "Log out", destroy_user_session_path, method: :delete, class: "header__user--edit"
+          = link_to "Log out", destroy_user_session_path, method: :delete, class: "header__user--edit", data: {"turbolinks" => false}
         -else
-          = link_to "Log in", new_user_session_path, class: "header__user--edit"
-          = link_to "Sign up", new_user_registration_path, class: "header__user--edit"
+          = link_to "Log in", new_user_session_path, class: "header__user--edit", data: {"turbolinks" => false}
+          = link_to "Sign up", new_user_registration_path, class: "header__user--edit", data: {"turbolinks" => false}
 
 
 
