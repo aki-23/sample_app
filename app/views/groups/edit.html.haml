@@ -16,6 +16,10 @@
         %br/
         = f.text_field :name
       .field
+        = f.label :rank
+        %br/
+        = f.number_field :rank,min: "1"
+      .field
         = f.label :tag
         %br/
         = f.collection_select :tag_ids, Tag.all, :id, :prefecture
