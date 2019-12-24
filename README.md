@@ -28,7 +28,7 @@ ski area information
 右上の検索ボックスでスキー場名の検索が可能です。
 ![skyarealistpage](https://user-images.githubusercontent.com/56856857/71332677-6c36f400-257a-11ea-80b5-be4a6846624d.png)
 
-スキー場のランキングが表示されます。（https://www.ski-ichiba.jp/navi/article/270/）  
+スキー場のランキングが表示されます。https://www.ski-ichiba.jp/navi/article/270/  
 このランキングからも各スキー場のチャットページに遷移することが可能です。
 ![ranklistpage](https://user-images.githubusercontent.com/56856857/71350077-cc965780-25b3-11ea-8f82-b64ad5fe6424.png)
 
