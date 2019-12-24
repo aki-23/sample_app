@@ -35,7 +35,6 @@ class GroupsController < ApplicationController
   end
 
   def edit
-    @group = Group.find(params[:id])
   end
 
   def update
@@ -44,6 +43,12 @@ class GroupsController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def destroy
+    @group = Group.find(params[:id])
+    @group.destroy
+    redirect_to grouplist_groups_path
   end
 
   def search

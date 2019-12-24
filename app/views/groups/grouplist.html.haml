@@ -2,13 +2,15 @@
   .main__groups
     - @groups.each do |group|
       .skyarea
-        = link_to group_messages_path(group),class: "skyarea_img" do
-          = image_tag group.image_url, class: "group-image"
+        = link_to group_messages_path(group),class: "skyarea_img", data: {"turbolinks" => false} do
+          - if group.image_url
+            = image_tag group.image_url, class: "group-image"
         .skyarea__name
-          = link_to group_messages_path(group) do
+          = link_to group_messages_path(group), data: {"turbolinks" => false} do
             = group.name
         - if user_signed_in? && current_user.id == 1
-          = link_to "group edit", edit_group_path(group), method: :get, class: "group--edit--command"
+          = link_to "編集", edit_group_path(group), method: :get, class: "group--edit--command", data: {"turbolinks" => false}
+          = link_to "削除",group_path(group), method: :delete, class: "group--delete--command", data: {"turbolinks" => false}
 
   
   = form_with url: search_groups_path, method: :get,class: "search-form", local: true do |form|
@@ -17,5 +19,5 @@
   
   - if user_signed_in? && current_user.id == 1
     .admin__box
-      = link_to "group create", new_group_path, method: :get, class: "group--create"
+      = link_to "作成", new_group_path, method: :get, class: "group--create"
 = render 'shared/top-btn'

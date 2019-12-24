@@ -6,7 +6,7 @@ class Group < ApplicationRecord
   # belongs_to :user
   has_many :group_tag, dependent: :destroy
   has_many :tags, through: :group_tag
-  has_many :messages
+  has_many :messages, dependent: :destroy
   mount_uploader :image, ImageUploader
 
   def self.search(search)

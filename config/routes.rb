@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   resources :users,only: [:show]
   
-  resources :groups, only: [:new, :create, :edit, :update] do
+  resources :groups, only: [:new, :create, :edit, :update, :destroy] do
     resources :messages, only: [:index, :create]
     collection do
       get 'search'
