@@ -7,8 +7,8 @@ ski area information
 スキー場についての情報掲示板です。特定のスキー場を押すと、チャット画面に飛び、投稿や閲覧をし情報収集を行うことができます。
 
 ## Function
-ユーザー関係：新規登録、ログイン、ログアウト
-スキー場関係：一覧表示、ランキング表示、スキー場検索
+ユーザー関係：新規登録、ログイン、ログアウト   
+スキー場関係：一覧表示、ランキング表示、スキー場検索 
 チャット機能：閲覧、投稿
 
 ## Demo
@@ -24,11 +24,11 @@ ski area information
 トップページのinformation listからリンク先を選択します。
 ![toppage](https://user-images.githubusercontent.com/56856857/71332245-d2227c00-2578-11ea-8f70-2fc8eb4837fa.png)
 
-ここで選択したスキー場のチャットページに遷移します。
+ここで選択したスキー場のチャットページに遷移します。  
 右上の検索ボックスでスキー場名の検索が可能です。
 ![skyarealistpage](https://user-images.githubusercontent.com/56856857/71332677-6c36f400-257a-11ea-80b5-be4a6846624d.png)
 
-スキー場のランキングが表示されます。（https://www.ski-ichiba.jp/navi/article/270/）
+スキー場のランキングが表示されます。（https://www.ski-ichiba.jp/navi/article/270/）  
 このランキングからも各スキー場のチャットに遷移することが可能です。
 ![ranklistpage](https://user-images.githubusercontent.com/56856857/71350077-cc965780-25b3-11ea-8f82-b64ad5fe6424.png)
 
@@ -39,9 +39,9 @@ ski area information
 ## 開発予定機能
 ① ユーザーマイページ画面の作成
 - 動画、写真投稿
-- いいね機能
+- いいね機能  
 ② スキー場関係
-- いいね機能、いいね順表示
+- いいね機能、いいね順表示  
 ③ コミュニティ関係
 - 管理者へコミュニティ作成依頼、編集依頼、削除依頼
 - チャット機能
