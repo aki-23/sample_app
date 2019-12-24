@@ -2,14 +2,14 @@
   .main__groups
     - @groups.each do |group|
       .skyarea.skyarea-rank
-        = link_to group_messages_path(group),class: "skyarea_img" do
+        = link_to group_messages_path(group),class: "skyarea_img", data: {"turbolinks" => false} do
           = image_tag group.image_url, class: "group-image"
         .skyarea__name
           %i
-            = link_to group_messages_path(group) do
+            = link_to group_messages_path(group), data: {"turbolinks" => false} do
               = group.rank
               位
-          = link_to group_messages_path(group) do
+          = link_to group_messages_path(group), data: {"turbolinks" => false} do
             = group.name
         -# .skyarea__rank
         -#   = group.rank
