@@ -28,9 +28,20 @@
       text-align: center;
       text-shadow:1px 0 0 white, 1px 1px 0 white, 0 1px 0 white, -1px 1px 0 white, -1px 0 0 white, -1px -1px 0 white, 0 -1px 0 white, 1px -1px 0 white;
     }
+    .skyarea-hp {
+      position: absolute;
+      top: 35px;
+      right: 0;
+      left: 0;
+      font-size: 14px;
+      text-align: center;
+      a {
+        text-decoration: none;
+      }
+    }
     .message__content {
       width: 100%;
-      height: calc(92% - 5px);
+      height: calc(92% - 15px);
       position: absolute;
       bottom: 0;
       overflow: scroll;

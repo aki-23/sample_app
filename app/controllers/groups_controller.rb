@@ -14,6 +14,9 @@ class GroupsController < ApplicationController
 
   def new
     @group = Group.new
+    # @group.tags << @group.tag_ids
+    # @group.group_tag.build
+
   end
 
   def create
@@ -79,7 +82,7 @@ class GroupsController < ApplicationController
 
   private
   def group_params
-    params.require(:group).permit(:name, :image, :rank, tag_ids: [])
+    params.require(:group).permit(:name, :image, :rank, :hp, :tag_ids)
   end
 
   def set_group

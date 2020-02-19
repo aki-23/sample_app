@@ -2,7 +2,7 @@
   padding: 15px;
   background-color: rgba(white,0.9);
   width: 80%;
-  margin: 100px auto;
+  margin: 0px 80px auto;
   h2 {
     margin-bottom: 20px;
     text-align: center;
@@ -32,11 +32,15 @@
       box-sizing: border-box;
       width: 100%;
       margin: 3px 0 10px;
-      padding: 10px;
+      padding: 8px;
       border: 1px solid #D8D8D8;
       border-radius: 5px;
-      height: 46px;
+      height: 40px;
     }
+  }
+  input {
+    padding: 8px;
+    margin-bottom: 8px;
   }
   .group-submit {
     margin-top: 13px;

@@ -4,6 +4,9 @@
     .skyarea-image
     .skyarea-name
       = @group.name
+    .skyarea-hp
+      %a(href= '#{@group.hp}' target="_blank" rel="noopener noreferrer")
+        HPはこちら
     .message__content
       - @messages.each do |message|
         .message__box--setting
