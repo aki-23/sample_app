@@ -11,6 +11,7 @@
         - if user_signed_in? && current_user.id == 1
           = link_to "編集", edit_group_path(group), method: :get, class: "group--edit--command", data: {"turbolinks" => false}
           = link_to "削除",group_path(group), method: :delete, class: "group--delete--command", data: {"turbolinks" => false}
+      -# = group.tags.region
 
   
   = form_with url: search_groups_path, method: :get,class: "search-form", local: true do |form|

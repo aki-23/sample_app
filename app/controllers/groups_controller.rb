@@ -55,7 +55,7 @@ class GroupsController < ApplicationController
   end
 
   def search
-    @groups = Group.includes(:tags).search(params[:keyword]).order("RAND()")
+    @groups = Group.includes(:tags).search(params[:keyword])
     respond_to do |format|
       format.html
       format.json
@@ -64,7 +64,7 @@ class GroupsController < ApplicationController
 
   def grouplist
     if user_signed_in?
-      @groups = Group.all
+      @groups = Group.includes(:tags).all
       group = Group.includes(:user) 
     else
       redirect_to root_path

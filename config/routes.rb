@@ -2,7 +2,6 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'groups#home'
   get 'groups', to: 'groups#index'
-  get 'groups', to: 'groups#show'
 
   resources :users,only: [:show]
   
