@@ -65,7 +65,12 @@
             display: flex;
             &__name {
               font-size: 15px;
+              margin-top: 3px;
               margin-right: 10px;
+              a {
+              text-decoration: none;
+              color: white;
+              }
             }
             &__box {
               display: flex;
