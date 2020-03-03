@@ -19,7 +19,7 @@
       .header__user
         - if user_signed_in?
           %span.header__user__name
-            = link_to user_path(current_user) do
+            = link_to user_path(current_user), data: {"turbolinks" => false} do
               = current_user.name
           = link_to "Log out", destroy_user_session_path, method: :delete, class: "header__user--edit", data: {"turbolinks" => false}
         -else
