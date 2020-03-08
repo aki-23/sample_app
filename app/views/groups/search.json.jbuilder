@@ -1,6 +1,6 @@
 json.array! @groups do |group|
   json.id group.id
   json.image_url group.image_url
-	json.name group.name
-	# json.tags.region group.region
+  json.name group.name
+  json.prefecture group.tag.prefecture
 end

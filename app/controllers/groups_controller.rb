@@ -55,7 +55,7 @@ class GroupsController < ApplicationController
   end
 
   def search
-    @groups = Group.includes(:tags).search(params[:keyword])
+    @groups = Group.includes(:tag).search(params[:keyword])
     respond_to do |format|
       format.html
       format.json
@@ -64,7 +64,7 @@ class GroupsController < ApplicationController
 
   def grouplist
     if user_signed_in?
-      @groups = Group.includes(:tags).all
+      @groups = Group.all
       group = Group.includes(:user) 
     else
       redirect_to root_path
@@ -82,7 +82,8 @@ class GroupsController < ApplicationController
 
   private
   def group_params
-    params.require(:group).permit(:name, :image, :rank, :hp, :tag_ids)
+    # params.require(:group).permit(:name, :image, :rank, :hp, :tag_ids)
+    params.require(:group).permit(:name, :image, :rank, :hp, :tag_id)
   end
 
   def set_group

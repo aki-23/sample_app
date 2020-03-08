@@ -22,8 +22,8 @@
         %br/
         = f.number_field :rank,min: "1"
       .field
-        = f.label :tag
+        = f.label :tag_id
         %br/
-        = f.collection_select :tag_ids, Tag.all, :id, :prefecture
+        = f.collection_select :tag_id, Tag.all, :id, :prefecture
       .actions
         = f.submit "create", class: "group-submit"

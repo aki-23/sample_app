@@ -4,8 +4,9 @@ class Group < ApplicationRecord
   # has_many :users_groups
   # has_many :users, through: :users_groups
   has_many :users
-  has_many :group_tags, dependent: :destroy
-  has_many :tags, through: :group_tags
+  # has_many :group_tags, dependent: :destroy
+  # has_many :tags, through: :group_tags
+  belongs_to :tag
   has_many :messages, dependent: :destroy
   mount_uploader :image, ImageUploader
 
@@ -14,17 +15,11 @@ class Group < ApplicationRecord
       # group_name = Group.where('name LIKE(?)', "%#{search}%")
       # tags_prefecture = Tag.where('prefecture LIKE(?)', "%#{search}%")
       # Group.where('name LIKE(?)', "%#{search}%") & Tag.where('prefecture LIKE(?)', "%#{search}%")
-			# Group.includes(:tags).where('name LIKE(?)', "%#{search}%")
-			Group.includes(:tags).where("name LIKE ?", "%#{search}%")
-			# Group.includes(:tags).where(('region LIKE(?)', "%#{search}%") || ('prefecture LIKE(?)', "%#{search}%"))
-      # Group.where('name LIKE(?) or prefecture LIKE(?)', "%#{search}%", "%#{search}%")
+      # Group.includes(:tags).where(('region LIKE(?)', "%#{search}%") || ('prefecture LIKE(?)', "%#{search}%"))
+      Group.joins(:tag).where('name LIKE(?) or prefecture LIKE(?) or region LIKE(?)', "%#{search}%", "%#{search}%", "%#{search}%")
     else
       Group.all
     end
   end
 
-  # def self.search(search)
-  #   return Group.all unless search
-  #   Group.where('text LIKE(?)', "%#{search}%")
-  # end
 end
