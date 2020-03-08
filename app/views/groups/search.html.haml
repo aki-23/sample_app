@@ -8,6 +8,6 @@
           = link_to group_messages_path(group), data: {"turbolinks" => false} do
             = group.name
 
-  = form_with url: search_groups_path, method: :get,class: "search-form", local: true do |form|
-    = form.text_field :keyword, placeholder: "グループを検索する", class: "search-input"
-    = form.submit "search", class: "search-submit"
+  -# = form_with url: search_groups_path, method: :get,class: "search-form", local: true do |form|
+  -#   = form.text_field :keyword, placeholder: "グループを検索する", class: "search-input"
+  -#   = form.submit "search", class: "search-submit"
