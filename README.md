@@ -34,15 +34,16 @@ ski area information
 ![toppage](https://user-images.githubusercontent.com/56856857/76160473-e3d5f180-616d-11ea-9fcb-b37725699bd1.png)
 
 ここで選択したスキー場のチャットページに遷移します。  
-右上の検索ボックスで検索（スキー場名、地域、都道府県）が可能です。
+右上の検索ボックスで検索（スキー場名、都道府県、地方）が可能です。
 ![skyarealistpage](https://user-images.githubusercontent.com/56856857/71332677-6c36f400-257a-11ea-80b5-be4a6846624d.png)
 
-人気のスキー場が表示されます。https://www.ski-ichiba.jp/navi/article/270/  
+人気のスキー場が表示されます。　参考サイト： https://www.ski-ichiba.jp/navi/article/270/  
 ここからも各スキー場のチャットページに遷移することが可能です。
 ![ranklistpage](https://user-images.githubusercontent.com/56856857/75603060-2e23f680-5b0e-11ea-8d41-7f49b06d7fe5.png)
 
 ### チャットページ
 チャット閲覧、投稿により情報収集を行うことが可能です。
+また、「HPはこちら」から各種ホームページへ移行が可能です。
 ![messagepage](https://user-images.githubusercontent.com/56856857/75603056-2b290600-5b0e-11ea-8951-db1e7b3b2fc8.png)
 
 ## 開発予定機能
