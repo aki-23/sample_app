@@ -34,7 +34,7 @@ ski area information
 ![toppage](https://user-images.githubusercontent.com/56856857/71332245-d2227c00-2578-11ea-8f70-2fc8eb4837fa.png)
 
 ここで選択したスキー場のチャットページに遷移します。  
-右上の検索ボックスでスキー場名の検索が可能です。
+右上の検索ボックスで検索（スキー場名、地域、都道府県）が可能です。
 ![skyarealistpage](https://user-images.githubusercontent.com/56856857/71332677-6c36f400-257a-11ea-80b5-be4a6846624d.png)
 
 人気のスキー場が表示されます。https://www.ski-ichiba.jp/navi/article/270/  
@@ -51,7 +51,6 @@ ski area information
 - いいね機能
 ### スキー場関係
 - いいね機能、いいね順表示
-- 都道府県、地方検索機能
 ### コミュニティ関係
 - 管理者へコミュニティ作成依頼、編集依頼、削除依頼
 - チャット機能
@@ -77,7 +76,6 @@ ski area information
 |hp   |text||
 ### Association
 - has_many :users
-- has_many :tags, through: :groups_tags
 - has_many :groups_tags
 - has_many :messages
 
@@ -98,14 +96,4 @@ ski area information
 |region    |string|null: false|
 |prefecture|string|null: false|
 ### Association
-- has_many :groups, through: :groups_tags
 - has_many :groups_tags
-
-### groups_tagsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|group_id|integer|null:false, foreign_key: true|
-|tags_id |integer|null:false, foreign_key: true|
-### Association
-- belongs_to :group
-- belongs_to :tag
