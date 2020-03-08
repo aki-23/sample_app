@@ -31,7 +31,7 @@ ski area information
 
 ### トップページ
 トップページのinformation listからリンク先を選択します。
-![toppage](https://user-images.githubusercontent.com/56856857/71332245-d2227c00-2578-11ea-8f70-2fc8eb4837fa.png)
+![toppage](https://user-images.githubusercontent.com/56856857/76160473-e3d5f180-616d-11ea-9fcb-b37725699bd1.png)
 
 ここで選択したスキー場のチャットページに遷移します。  
 右上の検索ボックスで検索（スキー場名、地域、都道府県）が可能です。
