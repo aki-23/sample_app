@@ -6,13 +6,9 @@ $("turbolinks:load", function(){
                     window.mozRequestAnimationFrame ||
                     window.webkitRequestAnimationFrame ||
                     window.msRequestAnimationFrame;
-    const cancFrame = window.cancelAnimationFrame ||
-                    window.mozcancelAnimationFrame ||
-                    window.webkitcancelAnimationFrame ||
-                    window.mscancelAnimationFrame;
+
     const snowflakes = [];
 
-    let handle;
     let w = ctx.canvas.width = window.innerWidth;
     let h = ctx.canvas.height = window.innerHeight;
 
@@ -78,7 +74,7 @@ $("turbolinks:load", function(){
     function loop() {
       draw();
       update();
-      handle = animFrame(loop);
+      animFrame(loop);
     }
 
     createSnow(100);
