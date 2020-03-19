@@ -2,12 +2,21 @@
   padding: 15px;
   background-color: rgba(white,0.9);
   width: 80%;
-  margin: 0px 80px auto;
+  margin: 30px auto;
   h2 {
     margin-bottom: 20px;
     text-align: center;
   }
   &__box {
+    position: relative;
+    a.back__btn {
+      position: absolute;
+      right: 2px;
+      top: -5px;
+      text-decoration: none;
+      color: black;
+      font-size: 20px;
+    }
     .imgfield {
       position: relative;
       input[type="file"]{

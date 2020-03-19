@@ -1,6 +1,8 @@
 .group--new
   .group--new__box
     %h2 group create
+    = link_to grouplist_groups_path, class: "back__btn", data: {"turbolinks" => false} do
+      ×
     = form_for @group, class: 'new_group',html: { multipart: true} do |f|
       .field.imgfield
         = f.label :image

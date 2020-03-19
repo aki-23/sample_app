@@ -39,6 +39,14 @@
         text-decoration: none;
       }
     }
+    a.back__btn {
+      position: absolute;
+      right: 20px;
+      top: 6px;
+      text-decoration: none;
+      color: black;
+      font-size: 20px;
+    }
     .message__content {
       width: 100%;
       height: calc(92% - 15px);

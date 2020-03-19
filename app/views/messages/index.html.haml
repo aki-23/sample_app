@@ -7,6 +7,8 @@
     .skyarea-hp
       %a(href= '#{@group.hp}' target="_blank" rel="noopener noreferrer")
         HPはこちら
+    = link_to grouplist_groups_path, class: "back__btn", data: {"turbolinks" => false} do
+      ×
     .message__content
       - @messages.each do |message|
         .message__box--setting
